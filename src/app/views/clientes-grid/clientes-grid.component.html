@@ -1,0 +1,7 @@
+
+<div class="clientes-grid">
+    <div style="background-image: url('/assets/empresas/logo_agencia_bpa.png');"></div>
+    <div style="background-image: url('/assets/empresas/logo_biocom.png');"></div>
+    <div *ngFor="let cliente of clientes" style="background-image: url('/assets/empresas/{{cliente.image}}');">
+    </div>
+</div>
