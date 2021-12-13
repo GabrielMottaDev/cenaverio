@@ -1,44 +1,42 @@
 <header>
-    <div class="top-container">
+    <div class="top-container" #logo>
     </div>
 
-    <div class="header" id="header" #header [class.sticky]="isSticky">
-        <nav>
-            <ul>
-                <li><a>Inicio</a></li>
-                <li><a href="#">A Empresa</a></li>
-                <li><a href="#">Nossas Atividades</a></li>
-                <li><a href="#">Nossos Clientes</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav [class.sticky]="isSticky" #header >
+        <div (click)="scroll(logo)">Inicio</div>
+        <div (click)="scroll(empresa)">A Empresa</div>
+        <div (click)="scroll(atividades)">Nossas Atividades</div>
+        <div (click)="scroll(clientes)">Nossos Clientes</div>
+        <div (click)="scroll(contato)">Contato</div>
+    </nav>
 </header>
 <div class="navio-banner" [class.sticky-space]="isSticky" style="background-image: url('/assets/banner_01.png');">
     <div class="navio-banner-cover"></div>
 </div>
-<div id="empresa" class="empresa content">
+
+<div id="empresa" class="empresa content" #empresa>
     <div class="empresa-container">
         <div>
             <div class="content-title">
-                <h3>A EMPRESA</h3>
+                <h2>A EMPRESA</h2>
             </div>
             <p>
-                O CENTRO MÉDICO NAVEGANTES DO BRASIL LTDA presta serviço Médico e Odontológico no mais alto patamar de qualidade, sendo no Rio de Janeiro, referência em atendimento de Urgência e Emergência à Marinha Mercante no Brasil.
-                Nossa equipe de profissionais altamente qualificados, bilíngues e reconhecidos internacionalmente, prestam de forma ininterrupta atendimento Médico e Odontológico de excelência para empresas de seguro, navegação de cabotagem e de longo curso e famílias expatriadas. 
+                <b>O CENTRO MÉDICO NAVEGANTES DO BRASIL LTDA</b> presta serviço <b>Médico e Odontológico</b> no mais alto patamar de qualidade, sendo no Rio de Janeiro, referência em atendimento de Urgência e Emergência à Marinha Mercante no Brasil.
+                <br/><br/>Nossa equipe de profissionais altamente qualificados, bilíngues e reconhecidos internacionalmente, prestam de forma ininterrupta atendimento Médico e Odontológico de excelência para empresas de seguro, navegação de cabotagem e de longo curso e famílias expatriadas. 
             </p>
         </div>
         <div>
             <div class="content-title">
-                <h3>NOSSA MISSÃO</h3>
+                <h2>NOSSA MISSÃO</h2>
             </div>
             <p>
-                Prestar atendimento Médico e Odontológico no mais alto grau de qualidade para casos de urgência/emergência aos envolvidos direta ou indiretamente nas diversas etapas da navegação de cabotagem e de longo curso. Atendimento a qualquer tempo e com resposta imediata, sendo nosso apoio prestado por todas as especialidades médicas e odontológicas em seu mais alto padrão.
+                Prestar atendimento <b>Médico e Odontológico</b> no mais alto grau de qualidade para casos de urgência/emergência aos envolvidos direta ou indiretamente nas diversas etapas da navegação de cabotagem e de longo curso.
+                <br/><br/>Atendimento a qualquer tempo e com resposta imediata, sendo nosso apoio prestado por todas as especialidades médicas e odontológicas em seu mais alto padrão.
             </p>
         </div>
     </div>
 </div>
-<div id="atividades" class="atividades content">
+<div id="atividades" class="atividades content" #atividades>
     <div class="content-title">
         <h2>Nossas Atividades</h2>
     </div>
@@ -51,33 +49,86 @@
         </div>
         <div class="atividades-content">
             <ul>
-                <li>Atendimento Médico e Odontológico Ambulatorial , de Urgência e Emergência com profissionais bilíngues, especializados em diversas áreas.</li>
-                <li>Exames laboratoriais com resultados em até 48h, exceto em casos especiais de dosagem</li>
+                <li>Atendimento <b>Médico e Odontológico Ambulatorial</b>, de Urgência e Emergência com profissionais bilíngues, especializados em diversas áreas.</li>
+                <li>Exames laboratoriais com resultados em até <b>48h</b>, exceto em casos especiais de dosagem.</li>
                 <li>Tratamento especializado para grandes queimados.</li>
-                <li>UTI móvel própria para resgate e transferência de pacientes.</li>
-                <li>Escolta Médica: acompanhamento de médico e enfermeiro a pacientes estáveis durante translado.</li>
-                <li>Cotamos e fornecemos produtos no mercado local para garantir suprimentos para a enfermaria da embarcação.</li>
-                <li>Renovação dos certificados de produtos médicos na embarcação (Medical Chest Certificate).</li>
-                <li>Realização de certificados médicos anual e bianual para diversas bandeiras (Malásia, Bahamas, IMO etc).</li>
+                <li><b>UTI móvel</b> própria para resgate e transferência de pacientes.</li>
+                <li><b>Escolta Médica</b>: acompanhamento de médico e enfermeiro a pacientes estáveis durante translado.</li>
+                <li><b>Cotamos e fornecemos</b> produtos no mercado local para garantir suprimentos para a enfermaria da embarcação.</li>
+                <li>Renovação dos certificados de produtos médicos na embarcação (<b>Medical Chest Certificate</b>).</li>
+                <li>Realização de <b>certificados médicos</b> anual e bianual para diversas bandeiras (Malásia, Bahamas, IMO etc).</li>
             </ul>
         </div>
     </div>
 </div>
-<div id="clientes" class="clientes content">
+<div id="especialidades" class="especialidades content" #especialidades>
+    <div class="especialidades-cover">
+        <div class="content-title-white">
+            <h2>Especialidades</h2>
+        </div>
+        <div class="especialidades-grid">
+            <div>
+                <div class="image-part">
+                    <div class="image-part-cover" style="background-image: url('/assets/svg/brasil.svg');"></div>
+                </div>
+                <h2>Navegação de cabotagem</h2>
+            </div>
+            <div>
+                <div class="image-part">
+                    <div class="image-part-cover" style="background-image: url('/assets/svg/danger.svg');"></div>
+                </div>
+                <h2>Urgência / Emergência</h2>
+            </div>
+            <div>
+                <div class="image-part">
+                    <div class="image-part-cover" style="background-image: url('/assets/svg/planet.svg');"></div>
+                </div>
+                <h2>Navegação de longo curso</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="clientes" class="clientes content" #clientes>
     <div class="content-title">
         <h2>Nossos Clientes</h2>
     </div>
     <app-clientes-grid></app-clientes-grid>
     
 </div>
-<div id="contato" class="contato content">
+<div id="contato" class="contato content" #contato>
     <div class="content-title">
         <h2>Contato</h2>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto quos accusantium reprehenderit ex,
-        necessitatibus rerum aut asperiores quisquam magni neque dicta amet nulla quaerat illum. Ut quo cum ab.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto quos accusantium reprehenderit ex,
-        necessitatibus rerum aut asperiores quisquam magni neque dicta amet nulla quaerat illum. Ut quo cum ab.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto quos accusantium reprehenderit ex,
-        necessitatibus rerum aut asperiores quisquam magni neque dicta amet nulla quaerat illum. Ut quo cum ab.</p>
+    <div class="equipe-grid">
+        <div class="equipe-card" (click)="openWhatsapp('5521982850393')">
+            <div class="equipe-header" style="background-image: url('/assets/equipe/sarita.jpg');"></div>
+            <div class="equipe-footer">
+                <h3>Drª Sarita Bonette</h3>
+                <p>+55 (21) 98285-0393</p>
+                <p>saritabonette@cenaverio.com.br</p>
+            </div>
+        </div>
+        <div class="equipe-card" (click)="openWhatsapp('5521999978499')">
+            <div class="equipe-header" style="background-image: url('/assets/equipe/leonardo.jpg');"></div>
+            <div class="equipe-footer">
+                <h3>Drº Leonardo Ponce da Motta</h3>
+                <p>+55 (21) 99997-8499</p>
+                <p>leonardo@cenaverio.com.br</p>
+            </div>
+        </div>
+        <div class="equipe-card" (click)="openWhatsapp('5521980002009')">
+            <div class="equipe-header" style="background-image: url('/assets/equipe/mara.jpg');"></div>
+            <div class="equipe-footer">
+                <h3>Drª Mara Elisa de Oliveira Gama</h3>
+                <p>+55 (21) 98000-2009</p>
+                <p>maraodonto@cenaverio.com.br</p>
+            </div>
+        </div>
+    </div>
 </div>
+
+<footer>
+    <div class="footer-content content">
+        <a href="https://gabrielmotta.dev/" target="_blank"><p>Desenvolvido Por: @gabrielmottadev</p></a>
+    </div>
+</footer>

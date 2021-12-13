@@ -14,20 +14,28 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   ngOnInit(): void {
-
   }
 
   ngAfterViewInit(): void {
-    window.onscroll = () => (this.testFunction());
+    // window.onscroll = () => (this.onScrollFn());
   }
   
-  testFunction(): void {
+  onScrollFn(): void {
     let sticky = this.header.nativeElement.offsetTop;
     if (window.pageYOffset > sticky) {
       this.isSticky = true;
     } else {
       this.isSticky = false;
     }
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({block: "center", behavior: "smooth"});
+  }
+
+  openWhatsapp(numero: string): void {
+    let url = 'https://wa.me/' + numero + '/?text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20os%20servi%C3%A7os%20da%20CenavRio.';
+    window.open(url, '_blank')!.focus();
   }
 
 }
