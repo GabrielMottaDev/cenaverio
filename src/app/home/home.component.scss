@@ -52,6 +52,10 @@ header {
     width: 80%;
     margin: 0 auto;
     margin-top: 25px;
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+    }
 }
 
 .empresa {
@@ -71,25 +75,6 @@ header {
     
         div {
             width: 500px;
-            div {
-                position: relative;
-                h3 {
-                    text-align: center;
-                }
-                ::after {
-                    position: absolute;
-                    content: '';
-                    background: black;
-                    height: 2px;
-                    bottom: -8px;
-                    width: 52%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    left: 0;
-                    right: 0;
-                    border-radius: 50%;
-                }
-            }
             p {
 
             }
@@ -97,9 +82,41 @@ header {
     }
 }
 
-.clientes {
-    h2 {
-        text-transform: uppercase;
+.content-title {
+    position: relative;
+    h1,h2,h3 {
         text-align: center;
+    }
+    ::after {
+        position: absolute;
+        content: '';
+        background: black;
+        height: 2px;
+        bottom: -8px;
+        width: 10em;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        border-radius: 50%;
+    }
+}
+
+.clientes {
+}
+
+.atividades {
+    .ambiente-grid {
+        display: flex;
+        justify-content: center;
+        div {
+            width: 275px;
+            height: 145px;
+            margin: 5px;
+            // background-image: url('');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
     }
 }
