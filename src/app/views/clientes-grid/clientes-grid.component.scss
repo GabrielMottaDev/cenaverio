@@ -12,3 +12,13 @@
         background-size: contain;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .clientes-grid {
+        justify-content: space-between;
+        div {
+            width: 70px;
+            height: 60px;
+        }
+    }
+}
