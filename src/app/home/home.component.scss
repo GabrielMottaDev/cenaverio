@@ -1,10 +1,105 @@
 header {
-    .banner {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .top-container {
         width: 100%;
         height: 227px;
         background-image: url('/assets/logo_4.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: fit;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+
+        background: white;
+        box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.198);
+        & .content {
+            padding-top: 102px;
+        }
+    }
+
+    nav {
+        ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+
+            li {
+                padding: 0px 4em;
+                text-transform: uppercase;
+                font-weight: bold;
+                white-space: nowrap;
+                font-size: 14pt;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.empresa {
+    .empresa-banner {
+        width: 100%;
+        height: 227px;
+        background-image: url('/assets/banner_01.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .empresa-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        div {
+            width: 500px;
+            div {
+                position: relative;
+                h3 {
+                    text-align: center;
+                }
+                ::after {
+                    position: absolute;
+                    content: '';
+                    background: black;
+                    height: 2px;
+                    bottom: -8px;
+                    width: 52%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    left: 0;
+                    right: 0;
+                    border-radius: 50%;
+                }
+            }
+            p {
+
+            }
+        }
+    }
+}
+
+.clientes {
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
     }
 }

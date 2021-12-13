@@ -1,3 +1,55 @@
 <header>
-    <div class="banner"></div>
+    <div class="top-container">
+    </div>
+
+    <div class="header" id="header" #header [class.sticky]="isSticky">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">A Empresa</a></li>
+                <li><a href="#">Nossas Atividades</a></li>
+                <li><a href="#">Nossos Clientes</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
+<div id="atividades" class="atividades content">
+    <h2>Nossas Atividades</h2>
+</div>
+<div id="empresa" class="empresa content">
+    <div class="empresa-banner"></div>
+    <div class="empresa-container">
+        <div>
+            <div>
+                <h3>A EMPRESA</h3>
+            </div>
+            <p>
+                O CENTRO MÉDICO NAVEGANTES DO BRASIL LTDA presta serviço Médico e Odontológico no mais alto patamar de qualidade, sendo no Rio de Janeiro, referência em atendimento de Urgência e Emergência à Marinha Mercante no Brasil.
+                Nossa equipe de profissionais altamente qualificados, bilíngues e reconhecidos internacionalmente, prestam de forma ininterrupta atendimento Médico e Odontológico de excelência para empresas de seguro, navegação de cabotagem e de longo curso e famílias expatriadas. 
+            </p>
+        </div>
+        <div>
+            <div>
+                <h3>NOSSA MISSÃO</h3>
+            </div>
+            <p>
+                Prestar atendimento Médico e Odontológico no mais alto grau de qualidade para casos de urgência/emergência aos envolvidos direta ou indiretamente nas diversas etapas da navegação de cabotagem e de longo curso. Atendimento a qualquer tempo e com resposta imediata, sendo nosso apoio prestado por todas as especialidades médicas e odontológicas em seu mais alto padrão.
+            </p>
+        </div>
+    </div>
+</div>
+<div id="clientes" class="clientes content">
+    <h2>Nossos Clientes</h2>
+    <app-clientes-grid></app-clientes-grid>
+    
+</div>
+<div id="contato" class="contato content">
+    <h2>Contato</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto quos accusantium reprehenderit ex,
+        necessitatibus rerum aut asperiores quisquam magni neque dicta amet nulla quaerat illum. Ut quo cum ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto quos accusantium reprehenderit ex,
+        necessitatibus rerum aut asperiores quisquam magni neque dicta amet nulla quaerat illum. Ut quo cum ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto quos accusantium reprehenderit ex,
+        necessitatibus rerum aut asperiores quisquam magni neque dicta amet nulla quaerat illum. Ut quo cum ab.</p>
+</div>
