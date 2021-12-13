@@ -5,7 +5,7 @@
     <div class="header" id="header" #header [class.sticky]="isSticky">
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a>Inicio</a></li>
                 <li><a href="#">A Empresa</a></li>
                 <li><a href="#">Nossas Atividades</a></li>
                 <li><a href="#">Nossos Clientes</a></li>
@@ -14,8 +14,10 @@
         </nav>
     </div>
 </header>
+<div class="navio-banner" [class.sticky-space]="isSticky" style="background-image: url('/assets/banner_01.png');">
+    <div class="navio-banner-cover"></div>
+</div>
 <div id="empresa" class="empresa content">
-    <div class="empresa-banner"></div>
     <div class="empresa-container">
         <div>
             <div class="content-title">
@@ -40,11 +42,25 @@
     <div class="content-title">
         <h2>Nossas Atividades</h2>
     </div>
-    <div class="ambiente-grid">
-        <div style="background-image: url('/assets/ambiente/escritorio_1.png');"></div>
-        <div style="background-image: url('/assets/ambiente/escritorio_2.png');"></div>
-        <div style="background-image: url('/assets/ambiente/escritorio_3.png');"></div>
-        <div style="background-image: url('/assets/ambiente/escritorio_4.png');"></div>
+    <div class="atividades-align">
+        <div class="ambiente-grid">
+            <div style="background-image: url('/assets/ambiente/escritorio_1.png');"></div>
+            <div style="background-image: url('/assets/ambiente/escritorio_2.png');"></div>
+            <div style="background-image: url('/assets/ambiente/escritorio_3.png');"></div>
+            <div style="background-image: url('/assets/ambiente/escritorio_4.png');"></div>
+        </div>
+        <div class="atividades-content">
+            <ul>
+                <li>Atendimento Médico e Odontológico Ambulatorial , de Urgência e Emergência com profissionais bilíngues, especializados em diversas áreas.</li>
+                <li>Exames laboratoriais com resultados em até 48h, exceto em casos especiais de dosagem</li>
+                <li>Tratamento especializado para grandes queimados.</li>
+                <li>UTI móvel própria para resgate e transferência de pacientes.</li>
+                <li>Escolta Médica: acompanhamento de médico e enfermeiro a pacientes estáveis durante translado.</li>
+                <li>Cotamos e fornecemos produtos no mercado local para garantir suprimentos para a enfermaria da embarcação.</li>
+                <li>Renovação dos certificados de produtos médicos na embarcação (Medical Chest Certificate).</li>
+                <li>Realização de certificados médicos anual e bianual para diversas bandeiras (Malásia, Bahamas, IMO etc).</li>
+            </ul>
+        </div>
     </div>
 </div>
 <div id="clientes" class="clientes content">
