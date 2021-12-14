@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { LocaleService } from '../services/locale.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
   isSticky = false;
 
-  constructor() {}
+  constructor(private readonly localeService: LocaleService) {}
 
   ngOnInit(): void {
   }
@@ -34,7 +36,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   scrollToTop(): void {
-    window.scroll(0,0);
+    // window.scroll(0,0);
+    this.localeService.getLocale(environment.defaultLanguage).subscribe((res) => {
+      console.log(res);
+    });
   }
 
   openWhatsapp(numero: string): void {
