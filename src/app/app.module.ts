@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ClientesGridComponent } from './views/clientes-grid/clientes-grid.component';
+import { ContactFormComponent } from './views/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    ClientesGridComponent
+    ClientesGridComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

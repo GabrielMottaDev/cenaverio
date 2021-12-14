@@ -493,6 +493,19 @@ header {
             }
         }
     }
+    .contato-bottom {
+        margin-top: 90px;
+        display: flex;
+        flex-direction: row;
+        div {
+            width: 50%;
+        }
+        .contato-info {
+            p {
+                text-align: left;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {
