@@ -155,3 +155,7 @@
 <div class="scroll-to-top" [class.scroll-to-top-show]="isSticky" (click)="scrollToTop()">
     <div class="scroll-to-top-image"></div>
 </div>
+
+<div class="change-locale" (click)="changeLocale()">
+    <div class="change-locale-image" [style.background-image]="getLocaleImage()"></div>
+</div>
