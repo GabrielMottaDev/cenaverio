@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // window.onscroll = () => (this.onScrollFn());
+    window.onscroll = () => (this.onScrollFn());
   }
   
   onScrollFn(): void {
@@ -31,6 +31,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   scroll(el: HTMLElement) {
     el.scrollIntoView({block: "center", behavior: "smooth"});
+  }
+
+  scrollToTop(): void {
+    window.scroll(0,0);
   }
 
   openWhatsapp(numero: string): void {
