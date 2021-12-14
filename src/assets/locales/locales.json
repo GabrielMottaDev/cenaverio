@@ -1,0 +1,24 @@
+{
+    "en": {
+        "code": "1",
+        "language": "english",
+        "country": "united states",
+        "otherLocales": {
+            "pt-br": {
+                "language": "portuguese",
+                "country": "brazil"
+            }
+        }
+    },
+    "pt-br": {
+        "code": "55",
+        "language": "português",
+        "country": "brasil",
+        "otherLocales": {
+            "en": {
+                "language": "inglês",
+                "country": "estados unidos"
+            }
+        }
+    }
+}

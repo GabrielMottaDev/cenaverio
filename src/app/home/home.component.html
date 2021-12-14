@@ -3,11 +3,11 @@
     </div>
 
     <nav [class.sticky]="isSticky" #header >
-        <div (click)="scroll(logo)">Inicio</div>
-        <div (click)="scroll(empresa)">A Empresa</div>
-        <div (click)="scroll(atividades)">Nossas Atividades</div>
-        <div (click)="scroll(clientes)">Nossos Clientes</div>
-        <div (click)="scroll(contato)">Contato</div>
+        <div (click)="scroll(logo)" [innerHtml]="localeService.get('home.header.nav.index')">Início</div>
+        <div (click)="scroll(empresa)" [innerHtml]="localeService.get('home.header.nav.company')">A Empresa</div>
+        <div (click)="scroll(atividades)" [innerHtml]="localeService.get('home.header.nav.activities')">Nossas Atividades</div>
+        <div (click)="scroll(clientes)" [innerHtml]="localeService.get('home.header.nav.clients')">Nossos Clientes</div>
+        <div (click)="scroll(contato)" [innerHtml]="localeService.get('home.header.nav.contact')">Contato</div>
     </nav>
 </header>
 <div class="navio-banner" [class.sticky-space]="isSticky" style="background-image: url('/assets/banner_01.png');">
@@ -18,18 +18,18 @@
     <div class="empresa-container">
         <div>
             <div class="content-title">
-                <h2>A EMPRESA</h2>
+                <h2 [innerHtml]="localeService.get('home.company.title')">A EMPRESA</h2>
             </div>
-            <p>
+            <p [innerHtml]="localeService.get('home.company.the-company')">
                 <b>O CENTRO MÉDICO NAVEGANTES DO BRASIL LTDA</b> presta serviço <b>Médico e Odontológico</b> no mais alto patamar de qualidade, sendo no Rio de Janeiro, referência em atendimento de Urgência e Emergência à Marinha Mercante no Brasil.
                 <br/><br/>Nossa equipe de profissionais altamente qualificados, bilíngues e reconhecidos internacionalmente, prestam de forma ininterrupta atendimento Médico e Odontológico de excelência para empresas de seguro, navegação de cabotagem e de longo curso e famílias expatriadas. 
             </p>
         </div>
         <div>
             <div class="content-title">
-                <h2>NOSSA MISSÃO</h2>
+                <h2 [innerHtml]="localeService.get('home.mission.title')">NOSSA MISSÃO</h2>
             </div>
-            <p>
+            <p [innerHtml]="localeService.get('home.mission.our-mission')">
                 Prestar atendimento <b>Médico e Odontológico</b> no mais alto grau de qualidade para casos de urgência/emergência aos envolvidos direta ou indiretamente nas diversas etapas da navegação de cabotagem e de longo curso.
                 <br/><br/>Atendimento a qualquer tempo e com resposta imediata, sendo nosso apoio prestado por todas as especialidades médicas e odontológicas em seu mais alto padrão.
             </p>
@@ -38,7 +38,7 @@
 </div>
 <div id="atividades" class="atividades content" #atividades>
     <div class="content-title">
-        <h2>Nossas Atividades</h2>
+        <h2 [innerHtml]="localeService.get('home.activities.title')">Nossas Atividades</h2>
     </div>
     <div class="atividades-align">
         <div class="ambiente-grid">
@@ -47,7 +47,7 @@
             <div style="background-image: url('/assets/ambiente/escritorio_3.png');"></div>
             <div style="background-image: url('/assets/ambiente/escritorio_4.png');"></div>
         </div>
-        <div class="atividades-content">
+        <div class="atividades-content" [innerHtml]="localeService.get('home.activities.our-activities')">
             <ul>
                 <li>Atendimento <b>Médico e Odontológico Ambulatorial</b>, de Urgência e Emergência com profissionais bilíngues, especializados em diversas áreas.</li>
                 <li>Exames laboratoriais com resultados em até <b>48h</b>, exceto em casos especiais de dosagem.</li>
@@ -64,40 +64,40 @@
 <div id="especialidades" class="especialidades content" #especialidades>
     <div class="especialidades-cover">
         <div class="content-title-white">
-            <h2>Especialidades</h2>
+            <h2 [innerHtml]="localeService.get('home.speciality.title')">Especialidades</h2>
         </div>
         <div class="especialidades-grid">
             <div>
                 <div class="image-part">
                     <div class="image-part-cover" style="background-image: url('/assets/svg/brasil.svg');"></div>
                 </div>
-                <h2>Navegação de cabotagem</h2>
+                <h2 [innerHtml]="localeService.get('home.speciality.cabotage')">Navegação de cabotagem</h2>
             </div>
             <div>
                 <div class="image-part">
                     <div class="image-part-cover" style="background-image: url('/assets/svg/danger.svg');"></div>
                 </div>
-                <h2>Urgência / Emergência</h2>
+                <h2 [innerHtml]="localeService.get('home.speciality.urgency')">Urgência / Emergência</h2>
             </div>
             <div>
                 <div class="image-part">
                     <div class="image-part-cover" style="background-image: url('/assets/svg/planet.svg');"></div>
                 </div>
-                <h2>Navegação de longo curso</h2>
+                <h2 [innerHtml]="localeService.get('home.speciality.navigation')">Navegação de longo curso</h2>
             </div>
         </div>
     </div>
 </div>
 <div id="clientes" class="clientes content" #clientes>
     <div class="content-title">
-        <h2>Nossos Clientes</h2>
+        <h2 [innerHtml]="localeService.get('home.clients.title')">Nossos Clientes</h2>
     </div>
     <app-clientes-grid></app-clientes-grid>
     
 </div>
 <div id="contato" class="contato content" #contato>
     <div class="content-title">
-        <h2>Contato</h2>
+        <h2 [innerHtml]="localeService.get('home.contact.title')">Contato</h2>
     </div>
     <div class="equipe-grid">
         <div class="equipe-card" (click)="openWhatsapp('5521982850393')">
@@ -148,7 +148,7 @@
 
 <footer>
     <div class="footer-content content">
-        <a href="https://gabrielmotta.dev/" target="_blank"><p>Desenvolvido Por: @gabrielmottadev</p></a>
+        <a href="https://gabrielmotta.dev/" target="_blank"><p [innerHtml]="localeService.get('home.footer.dev')">Desenvolvido por: @gabrielmottadev</p></a>
     </div>
 </footer>
 

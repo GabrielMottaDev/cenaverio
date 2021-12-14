@@ -12,8 +12,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('header') header! : ElementRef;
   
   isSticky = false;
-
-  constructor(private readonly localeService: LocaleService) {}
+  constructor(public readonly localeService: LocaleService) { }
 
   ngOnInit(): void {
   }
@@ -37,9 +36,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   scrollToTop(): void {
     // window.scroll(0,0);
-    this.localeService.getLocale(environment.defaultLanguage).subscribe((res) => {
-      console.log(res);
-    });
+    if(this.localeService.currentLocale.locale == 'pt-br'){
+      this.localeService.setLocale('en');
+    } else {
+      this.localeService.setLocale('pt-br');
+    }
+    // detectChanges();
+    // alert(JSON.stringify(this.localeService.locales));
+    // this.localeService.getLocale(environment.defaultLanguage).subscribe((res) => {
+    //   console.log(res);
+    // });
   }
 
   openWhatsapp(numero: string): void {

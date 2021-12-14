@@ -1,6 +1,51 @@
 {
+    "locale": "pt-br",
     "home": {
-        
+        "header": {
+            "nav": {
+                "index": "Início",
+                "company": "A Empresa",
+                "activities": "Nossas Atividades",
+                "clients": "Nossos Clientes",
+                "contact": "Contato"
+            }
+        },
+        "company": {
+            "title": "A Empresa",
+            "the-company": "<b>O CENTRO MÉDICO NAVEGANTES DO BRASIL LTDA</b> presta serviço <b>Médico e Odontológico</b> no mais alto patamar de qualidade, sendo no Rio de Janeiro, referência em atendimento de Urgência e Emergência à Marinha Mercante no Brasil.<br/><br/>Nossa equipe de profissionais altamente qualificados, bilíngues e reconhecidos internacionalmente, prestam de forma ininterrupta atendimento Médico e Odontológico de excelência para empresas de seguro, navegação de cabotagem e de longo curso e famílias expatriadas."
+        },
+        "mission": {
+            "title": "Nossa Missão",
+            "our-mission": "Prestar atendimento <b>Médico e Odontológico</b> no mais alto grau de qualidade para casos de urgência/emergência aos envolvidos direta ou indiretamente nas diversas etapas da navegação de cabotagem e de longo curso.<br/><br/>Atendimento a qualquer tempo e com resposta imediata, sendo nosso apoio prestado por todas as especialidades médicas e odontológicas em seu mais alto padrão."
+        },
+        "activities": {
+            "title": "Nossas Atividades",
+            "our-activities": "<ul><li>Atendimento <b>Médico e Odontológico Ambulatorial</b>, de Urgência e Emergência com profissionais bilíngues, especializados em diversas áreas.</li><li>Exames laboratoriais com resultados em até <b>48h</b>, exceto em casos especiais de dosagem.</li><li>Tratamento especializado para grandes queimados.</li><li><b>UTI móvel</b> própria para resgate e transferência de pacientes.</li><li><b>Escolta Médica</b>: acompanhamento de médico e enfermeiro a pacientes estáveis durante translado.</li><li><b>Cotamos e fornecemos</b> produtos no mercado local para garantir suprimentos para a enfermaria da embarcação.</li><li>Renovação dos certificados de produtos médicos na embarcação (<b>Medical Chest Certificate</b>).</li><li>Realização de <b>certificados médicos</b> anual e bianual para diversas bandeiras (Malásia, Bahamas, IMO etc).</li></ul>"
+        },
+        "speciality": {
+            "title": "Especialidades",
+            "cabotage": "Navegação de cabotagem",
+            "urgency": "Urgência / Emergência",
+            "navigation": "Navegação de longo curso"
+        },
+        "clients": {
+            "title": "Nossos Clientes"
+        },
+        "contact": {
+            "title": "Contato",
+            "form": {
+                "title": "Formulário de contato",
+                "subject": "Assunto",
+                "name": "Nome",
+                "email": "E-mail",
+                "telephone": "Celular/Telefone",
+                "message": "Digite sua mensagem",
+                "submit": "Enviar"
+            } 
+        },
+        "footer": {
+            "dev": "Desenvolvido por: @gabrielmottadev"
+        }
     },
     "not-found": {
 
