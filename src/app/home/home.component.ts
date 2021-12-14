@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   scrollToTop(): void {
     // window.scroll(0,0);
     if(this.localeService.currentLocale.locale == 'pt-br'){
-      this.localeService.setLocale('en');
+      this.localeService.setLocale('es');
     } else {
       this.localeService.setLocale('pt-br');
     }

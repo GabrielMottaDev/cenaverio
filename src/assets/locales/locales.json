@@ -7,6 +7,10 @@
             "pt-br": {
                 "language": "portuguese",
                 "country": "brazil"
+            },
+            "es": {
+                "language": "spanish",
+                "country": "spain"
             }
         }
     },
@@ -18,6 +22,25 @@
             "en": {
                 "language": "inglês",
                 "country": "estados unidos"
+            },
+            "es": {
+                "language": "espanhol",
+                "country": "espanha"
+            }
+        }
+    },
+    "es": {
+        "code": "34",
+        "language": "español",
+        "country": "españa",
+        "otherLocales": {
+            "en": {
+                "language": "inglés",
+                "country": "estados unidos"
+            },
+            "pt-br": {
+                "language": "portugués",
+                "country": "brasil"
             }
         }
     }

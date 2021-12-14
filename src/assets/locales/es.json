@@ -1,0 +1,53 @@
+{
+    "locale": "es",
+    "home": {
+        "header": {
+            "nav": {
+                "index": "Inicio",
+                "company": "La Compañía",
+                "activities": "Nuestras Actividades",
+                "clients": "Nuestros Clientes",
+                "contact": "Contacto"
+            }
+        },
+        "company": {
+            "title": "La Empresa",
+            "the-company": "<b>CENAVE</b> ofrece servicios <b>médicos y dentales</b> de la más alta calidad, siendo en Río de Janeiro, una referencia en atención de emergencia a la marina mercante de Brasil.<br/><br/>Nuestro equipo de profesionales altamente calificados, bilingües e internacionalmente reconocidos proporciona atención médica y dental ininterrumpida de excelencia para las compañías de seguros, navegación de cabotaje e de larga distancia y familias expatriadas."
+        },
+        "mission": {
+            "title": "Nuestra Misión",
+            "our-mission": "Proporcionar la más alta calidad de atención <b>médica y dental</b> para casos urgentes de emergencia para aquellos que participan directa o indirectamente en las diversas etapas del cabotaje y la navegación de larga distancia.<br/><br/>Atención a cualquier momento y con respuesta inmediata, siendo nuestros servicios prestados por todas las especialidades médicas y de odontología al más alto nivel."
+        },
+        "activities": {
+            "title": "Nuestra Actividades",
+            "our-activities": "<ul><li>Atención <b>médica y dental</b> ambulatoria, urgencia y emergencia con profesionales bilingües, especializados en varias áreas.</li><li>Exámenes de laboratorio con resultados de hasta <b>48h</b>, excepto en casos de dosificación especial.</li><li>Tratamiento especializado para quemaduras grandes.</li><li><b>UCI móvil</b> propia para rescatar y transferir los pacientes.</li><li><b>Escolta médica</b>: acompañamiento de médico o de enfermera para pacientes estables dura nte el transporte.</li><li><b>Cotizamos y suministramos</b> productos del mercado local para garantizar las necesidades de abastecimiento de la enfermería del buque.</li><li>Renovación del certificado de productos médicos del buque (<b>Medical Chest Certificate</b>).</li><li>Realización de <b>certificados médicos</b> anuales e bianuales para diversas banderas (Malasia, Bahamas, OMI, etc.).</li></ul>"
+        },
+        "speciality": {
+            "title": "Especialidades",
+            "cabotage": "Navegación de cabotaje",
+            "urgency": "Urgencia / Emergencia",
+            "navigation": "Navegación de largo recorrido"
+        },
+        "clients": {
+            "title": "Nuestros Clientes"
+        },
+        "contact": {
+            "title": "Contacto",
+            "form": {
+                "title": "Formulario de contacto",
+                "subject": "Asunto",
+                "name": "Nombre",
+                "email": "E-mail",
+                "telephone": "Móvil/Teléfono",
+                "message": "Mensaje",
+                "submit": "Enviar"
+            } 
+        },
+        "footer": {
+            "dev": "Desarrollado por: @gabrielmottadev"
+        }
+    },
+    "not-found": {
+
+    }
+}
