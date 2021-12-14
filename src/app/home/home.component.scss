@@ -497,15 +497,31 @@ header {
         margin-top: 90px;
         display: flex;
         flex-direction: row;
-        div {
-            width: 50%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .contato-info,.contato-form {
+            width: 40%;
+            padding: 0px 22px;
+            margin: 50px 0px;
         }
+
         .contato-info {
+            width: max-content;
+            img {
+                width: 204px;
+                height: 227px;
+                margin-bottom: 60px;
+            }
             h3 {
               
             }
             p {
                 text-align: left;
+            }
+            &>* {
+                display: block;
+                margin: 0 auto;
             }
         }
     }
@@ -517,6 +533,32 @@ header {
             .equipe-card {
                 margin: 15px 0px;
             }
+        }
+        .contato-bottom {
+            flex-direction: column;
+
+            .contato-info,.contato-form {
+                width: 100%;
+                padding: 0px 0px;
+            }
+
+            .contato-form {
+                
+            }
+
+            .contato-info {
+                width: 100%;
+                img {
+                    width: 244px;
+                    height: 267px;
+                    margin-bottom: 100px;
+                }
+                &>* {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            
         }
     }
 }
