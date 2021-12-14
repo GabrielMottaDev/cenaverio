@@ -1,1 +1,11 @@
-<p>contact-form works!</p>
+<div class="content-title">
+    <h2>Formulário de contato</h2>
+</div>
+<form class="formulario" [formGroup]="contactForm" (ngSubmit)="submitContactForm(contactForm)">
+    <input type="text" placeholder="Assunto" formControlName="subject" [class.invalid]="subject?.invalid && (subject?.touched || subject?.dirty)" [patterns]="textPattern" mask="0*" [dropSpecialCharacters]=false>
+    <input type="text" placeholder="Nome" formControlName="name" [class.invalid]="name?.invalid && (name?.touched || name?.dirty)" [patterns]="textPattern" mask="0*" [dropSpecialCharacters]=false>
+    <input type="text" placeholder="E-mail" formControlName="email" [class.invalid]="email?.invalid && (email?.touched || email?.dirty)">
+    <input type="text" placeholder="Celular/Telefone" formControlName="telephone" [class.invalid]="telephone?.invalid && (telephone?.touched || telephone?.dirty)" mask="+00 (00) 00000-0000 || +00 (00) 0000-0000" [showMaskTyped]=false [dropSpecialCharacters]=false>
+    <textarea placeholder="Escreva aqui..." formControlName="message" [class.invalid]="message?.invalid && (message?.touched || message?.dirty)"></textarea>
+    <button type="submit">Enviar</button>
+</form>

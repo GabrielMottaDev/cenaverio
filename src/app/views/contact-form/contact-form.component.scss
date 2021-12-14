@@ -1,0 +1,34 @@
+@import "../../home/home.component.scss";
+.invalid {
+    color: red;
+    border: red solid 1px !important;
+}
+
+.formulario {
+    &>*{
+        margin: 8px 0px;
+    }
+    input, textarea, button {
+        width: 100%;
+        outline: none;
+        border: black solid 1px;
+        border-radius: 2px;
+        background: white;
+        padding: 10px;
+    }
+    input {
+        line-height: 20px;
+        font-size: 12pt;
+        
+    }
+    textarea {
+        resize: none;
+        height: 150px;
+    }
+    button {
+      background: black;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+    }
+}
