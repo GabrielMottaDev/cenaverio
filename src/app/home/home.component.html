@@ -2,11 +2,6 @@
     <div class="top-container" #logo>
     </div>
     <nav [class.menu-open]="isMenuOpen" [class.nav-fixed]="isSticky" #header>
-        <div class="menu-button" [class.menu-sticky]="isSticky&&!isMenuOpen" (click)="toggleMenu(this.isMenuOpen=!this.isMenuOpen)">
-            <div class="center" [class.active]="isMenuOpen">
-                <div></div>
-            </div>
-        </div>
         <div class="nav-item" (click)="scroll(logo)" [innerHtml]="localeService.get('home.header.nav.index')">Início</div>
         <div class="nav-item" (click)="scroll(empresa)" [innerHtml]="localeService.get('home.header.nav.company')">A Empresa</div>
         <div class="nav-item" (click)="scroll(atividades)" [innerHtml]="localeService.get('home.header.nav.activities')">Nossas Atividades</div>
