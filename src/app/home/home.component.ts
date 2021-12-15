@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('header') header! : ElementRef;
   
+  isMenuOpen = false;
   isSticky = false;
   constructor(public readonly localeService: LocaleService) { }
 
@@ -19,6 +20,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     window.onscroll = () => (this.onScrollFn());
+  }
+
+  toggleMenu(isOpen:boolean) {
+    this.isMenuOpen=isOpen
+
+    let body = document.getElementsByTagName('body')[0];
+    if (this.isMenuOpen) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = '';
+    }
   }
   
   onScrollFn(): void {
@@ -30,8 +42,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   }
 
-  scroll(el: HTMLElement) {
-    el.scrollIntoView({block: "center", behavior: "smooth"});
+  scroll(el: HTMLElement, block?: any, inline?: any) {
+    if(this.isMenuOpen){
+      this.toggleMenu(false);
+    }
+    if(block == null) {
+      block = 'center';
+    }
+    if(inline == null) {
+      inline = 'center';
+    }
+    el.scrollIntoView({block: block, inline: inline, behavior: "smooth"});
   }
 
   scrollToTop(): void {

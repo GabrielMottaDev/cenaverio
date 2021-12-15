@@ -13,23 +13,6 @@ header {
         background-size: contain;
     }
 
-    .sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 5;
-
-        background: white;
-        box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.198);
-    }
-
-    // .sticky + body {
-    //     padding-top: 1000px;
-    // }
-
-    // .sticky 
-
     nav {
         width: 70%;
         padding: 15px 0px;
@@ -48,9 +31,8 @@ header {
             white-space: nowrap;
             font-size: 14pt;
 
-            &:hover {
-                cursor: pointer;
-            }
+            cursor: pointer;
+            
 
             a {
                 text-decoration: none;
@@ -61,11 +43,101 @@ header {
     }
 }
 
-.sticky-space {
-    margin-top: 56px !important;
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    z-index: 500;
+    background: white;
+    box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (max-width: 600px) {
+    .nav-fixed {
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+.menu-button {
+    display: none;
+    width: fit-content;
+    // width: 50px;
+    // height: 50px;
+    // background: red;
+    font-weight: 600 !important;
+    cursor: pointer;
+    margin-left: 10px;
+
+    position: relative;
+
+    .center {
+        top: 0;
+        left: 0;
+        // transform: translate(-50%, -50%);
+        // position: absolute;
+        width: 50px;
+      }
+      
+      .center:before,
+      .center:after,
+      .center div {
+        background: black;
+        content: "";
+        display: block;
+        height: 6px;
+        border-radius: 2px;
+        margin: 7px 0;
+        transition: 0.5s;
+      }
+      .active:before {
+        transform: translateY(12px) rotate(135deg);
+      }
+      .active:after {
+        transform: translateY(-12px) rotate(-135deg);
+      }
+      .active div {
+        transform: scale(0);
+      }
+}
+.menu-sticky {
+    position: fixed;
+    top: -12px;
+    left: -12px;
+    // top: -89px;
+    // left: -89px;
+    z-index: 50;
+    margin: 0;
+    background: white;
+    font-size: 2rem !important;
+
+    border-radius: 50% 0% 5% 0%;
+    // padding: 100px 30px 30px 100px !important;
+    padding: 18px 10px 10px 18px !important;
+    box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.3);
+    opacity: .9;
+}
+
+
+.menu-open {
+    background: #fffffff0;
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .menu-button {
+        display: block !important;
+    }
     header {
         .top-container {
             width: 100%;
@@ -73,21 +145,53 @@ header {
         }
 
         nav {
+            
             width: 100%;
             // display: none;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: flex-start;
 
-            div {
+            & > div {
+                display: none;
                 padding: 0px 0px;
                 // margin: 0px 2px;
                 font-size: 12pt;
             }
         }
-    }
 
-    .sticky-space {
-        margin-top: 0 !important;
+
+        @keyframes menu-animation {
+            from {
+                // background-color: red;
+                transform: translateX(-100%);
+            }
+            to {
+                // background-color: yellow;
+            }
+        }
+
+        .menu-open {
+            // padding-top: 4rem;
+            animation-name: menu-animation;
+            animation-duration: 0.5s;
+            animation-timing-function: cubic-bezier();
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            & > div {
+                display: block;
+                font-size: 1.8rem;
+                font-weight: 300;
+                margin: 0.4rem 0.8rem;
+            }
+            .menu-button {
+                margin-top: 0.8rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        
     }
 }
 
@@ -597,7 +701,7 @@ footer {
     bottom: 15px;
     right: 15px;
 
-    opacity: .3;
+    opacity: .8;
     background: rgb(12, 12, 12);
     box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.2);
     padding: 18px;
@@ -647,20 +751,20 @@ footer {
 }
 
 .change-locale {
-    position: fixed;
-    display: initial;
+    position: unset;
+    display: none;
     z-index: 10;
     bottom: 15px;
     left: 15px;
 
-    opacity: .3;
+    opacity: 1;
     background: rgb(245, 245, 245);
     box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.2);
-    padding: 18px;
+    padding: 12px;
     margin: 0;
 
-    width: 38px;
-    height: 38px;
+    width: 48px;
+    height: 48px;
     
     border-radius: 50%;
 
@@ -689,6 +793,12 @@ footer {
     }
 
 }
+
+.change-locale-show {
+    position: fixed;
+    display: initial;
+}
+
 
 @media only screen and (max-width: 600px) {
     .change-locale {

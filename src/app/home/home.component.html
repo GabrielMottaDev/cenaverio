@@ -1,16 +1,20 @@
 <header>
     <div class="top-container" #logo>
     </div>
-
-    <nav [class.sticky]="isSticky" #header >
-        <div (click)="scroll(logo)" [innerHtml]="localeService.get('home.header.nav.index')">Início</div>
-        <div (click)="scroll(empresa)" [innerHtml]="localeService.get('home.header.nav.company')">A Empresa</div>
-        <div (click)="scroll(atividades)" [innerHtml]="localeService.get('home.header.nav.activities')">Nossas Atividades</div>
-        <div (click)="scroll(clientes)" [innerHtml]="localeService.get('home.header.nav.clients')">Nossos Clientes</div>
-        <div (click)="scroll(contato)" [innerHtml]="localeService.get('home.header.nav.contact')">Contato</div>
+    <nav [class.menu-open]="isMenuOpen" [class.nav-fixed]="isSticky" #header>
+        <div class="menu-button" [class.menu-sticky]="isSticky&&!isMenuOpen" (click)="toggleMenu(this.isMenuOpen=!this.isMenuOpen)">
+            <div class="center" [class.active]="isMenuOpen">
+                <div></div>
+            </div>
+        </div>
+        <div class="nav-item" (click)="scroll(logo)" [innerHtml]="localeService.get('home.header.nav.index')">Início</div>
+        <div class="nav-item" (click)="scroll(empresa)" [innerHtml]="localeService.get('home.header.nav.company')">A Empresa</div>
+        <div class="nav-item" (click)="scroll(atividades)" [innerHtml]="localeService.get('home.header.nav.activities')">Nossas Atividades</div>
+        <div class="nav-item" (click)="scroll(clientes)" [innerHtml]="localeService.get('home.header.nav.clients')">Nossos Clientes</div>
+        <div class="nav-item" (click)="scroll(contato, 'end', 'start')" [innerHtml]="localeService.get('home.header.nav.contact')">Contato</div>
     </nav>
 </header>
-<div class="navio-banner" [class.sticky-space]="isSticky" style="background-image: url('/assets/banner_01.png');">
+<div class="navio-banner" style="background-image: url('/assets/banner_01.png');">
     <div class="navio-banner-cover"></div>
 </div>
 
@@ -152,10 +156,10 @@
     </div>
 </footer>
 
-<div class="scroll-to-top" [class.scroll-to-top-show]="isSticky" (click)="scrollToTop()">
+<!-- <div class="scroll-to-top" [class.scroll-to-top-show]="isSticky&&!isMenuOpen" (click)="scrollToTop()">
     <div class="scroll-to-top-image"></div>
-</div>
+</div> -->
 
-<div class="change-locale" (click)="changeLocale()">
+<div class="change-locale" [class.change-locale-show]="!isMenuOpen" (click)="changeLocale()">
     <div class="change-locale-image" [style.background-image]="getLocaleImage()"></div>
 </div>
