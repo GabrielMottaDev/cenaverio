@@ -1,15 +1,9 @@
 <header>
     <div class="top-container" #logo>
     </div>
-    <nav [class.menu-open]="isMenuOpen" [class.nav-fixed]="isSticky" #header>
-        <div class="nav-item" (click)="scroll(logo)" [innerHtml]="localeService.get('home.header.nav.index')">Início</div>
-        <div class="nav-item" (click)="scroll(empresa)" [innerHtml]="localeService.get('home.header.nav.company')">A Empresa</div>
-        <div class="nav-item" (click)="scroll(atividades)" [innerHtml]="localeService.get('home.header.nav.activities')">Nossas Atividades</div>
-        <div class="nav-item" (click)="scroll(clientes)" [innerHtml]="localeService.get('home.header.nav.clients')">Nossos Clientes</div>
-        <div class="nav-item" (click)="scroll(contato, 'end', 'start')" [innerHtml]="localeService.get('home.header.nav.contact')">Contato</div>
-    </nav>
+    <app-navbar [elements]="[inicio,empresa,atividades,clientes,contato]" #navbar></app-navbar>
 </header>
-<div class="navio-banner" style="background-image: url('/assets/banner_01.png');">
+<div class="navio-banner" style="background-image: url('/assets/banner_01.png');" id="inicio" #inicio>
     <div class="navio-banner-cover"></div>
 </div>
 
@@ -63,7 +57,7 @@
 <div id="especialidades" class="especialidades content" #especialidades>
     <div class="especialidades-cover">
         <div class="content-title-white">
-            <h2 [innerHtml]="localeService.get('home.speciality.title')">Especialidades</h2>
+            <h2 [innerHtml]="loader ? localeService.get('home.speciality.title') : null | async">Especialidades</h2>
         </div>
         <div class="especialidades-grid">
             <div>
@@ -99,28 +93,16 @@
         <h2 [innerHtml]="localeService.get('home.contact.title')">Contato</h2>
     </div>
     <div class="equipe-grid">
-        <div class="equipe-card" (click)="openWhatsapp('5521982850393')">
-            <div class="equipe-header" style="background-image: url('/assets/equipe/sarita.jpg');"></div>
-            <div class="equipe-footer">
-                <h3>Drª Sarita Bonette</h3>
-                <p>+55 (21) 98285-0393</p>
-                <p>saritabonette@cenaverio.com.br</p>
-            </div>
-        </div>
-        <div class="equipe-card" (click)="openWhatsapp('5521999978499')">
-            <div class="equipe-header" style="background-image: url('/assets/equipe/leonardo.jpg');"></div>
-            <div class="equipe-footer">
-                <h3>Drº Leonardo Ponce da Motta</h3>
-                <p>+55 (21) 99997-8499</p>
-                <p>leonardo@cenaverio.com.br</p>
-            </div>
-        </div>
-        <div class="equipe-card" (click)="openWhatsapp('5521980002009')">
-            <div class="equipe-header" style="background-image: url('/assets/equipe/mara.jpg');"></div>
-            <div class="equipe-footer">
-                <h3>Drª Mara Elisa de Oliveira Gama</h3>
-                <p>+55 (21) 98000-2009</p>
-                <p>maraodonto@cenaverio.com.br</p>
+        <div *ngFor="let item of equipe; index as i">
+            <div class="equipe-card">
+                <div class="equipe-header" style="background-image: url('{{item.image}}');" (click)="openBubble(bubble)"></div>
+                <div class="equipe-footer">
+                    <h3>{{item.name}}</h3>
+                    <h2>{{item.getTitle()}}</h2>
+                    <p>{{item.displayPhone}}</p>
+                    <p>{{item.displayEmail}}</p>
+                </div>
+                <bubble #bubble [email]=item.email [phone]=item.phone [whatsapp]=item.whatsapp></bubble>
             </div>
         </div>
     </div>
@@ -155,6 +137,7 @@
     <div class="scroll-to-top-image"></div>
 </div> -->
 
-<!-- <div class="change-locale" [class.change-locale-show]="!isMenuOpen" (click)="changeLocale()">
+<!-- <div class="change-locale" [class.change-locale-show]="!isMenuOpen" (click)="changeLocale()"></div> -->
+<div class="change-locale change-locale-show" (click)="changeLocale()">
     <div class="change-locale-image" [style.background-image]="getLocaleImage()"></div>
-</div> -->
+</div>

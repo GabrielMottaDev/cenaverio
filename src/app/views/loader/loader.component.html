@@ -1,0 +1,6 @@
+<div class="loader" @fadeOut *ngIf="isLoading">
+    <div class="loader-message">
+        <fa-icon [classes]="['loader-spinner']" [icon]="iconLoading" [styles]="{'color': 'white'}" [spin]="true" size="4x"></fa-icon>
+        <h1>{{loaderMessage}}</h1>
+    </div>
+</div>

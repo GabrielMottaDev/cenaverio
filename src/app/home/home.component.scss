@@ -12,46 +12,10 @@ header {
         background-position: center;
         background-size: contain;
     }
-
-    nav {
-        width: 70%;
-        padding: 15px 0px;
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        // justify-content: center;
-
-
-        div {
-            // padding: 0px 32px;
-            text-transform: uppercase;
-            font-weight: 400;
-            white-space: nowrap;
-            font-size: 14pt;
-
-            cursor: pointer;
-            
-
-            a {
-                text-decoration: none;
-                color: black;
-            }
-        }
-
+    
+    &>*{
+        width: 100%;
     }
-}
-
-.nav-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100% !important;
-    z-index: 500;
-    background: white;
-    box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.3);
 }
 
 .menu-button {
@@ -411,9 +375,10 @@ header {
             }
         }
 
-        .atividades-content {
+        .atividades-content ::ng-deep {
             ul {
                 padding: 20px;
+                padding-left: 30px;
                 // list-style: none;
                 display: flex;
                 flex-direction: column;
@@ -465,7 +430,7 @@ header {
 
         .equipe-card {
             width: 280px;
-            height: 350px;
+            height: 390px;
             // background: red;
             margin: 15px 45px;
 
@@ -478,10 +443,10 @@ header {
 
             transition: transform 0.5s;
 
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.05);
-            }
+            // &:hover {
+            //     cursor: pointer;
+            //     // transform: scale(1.05);
+            // }
 
             .equipe-header {
                 background: black;
@@ -493,6 +458,11 @@ header {
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: top;
+
+                &:hover {
+                    cursor: pointer;
+                    // transform: scale(1.05);
+                }
             }
 
             .equipe-footer {
@@ -506,13 +476,37 @@ header {
                     text-align: center;
                     margin: 0;
                     font-size: 12pt;
-                    margin-bottom: 8px;
+                    margin-bottom: 4px;
+                    position: relative;
+                    font-weight: 400;
+                    
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 5rem;
+                        height: 1px;
+                        margin: 0 auto;
+                        background: black;
+                        right: 0;
+                        left: 0;
+                        top: 1.3rem;
+                        opacity: 0.3;
+                    }
+                }
+
+                h2 {
+                    text-align: center;
+                    margin: 0;
+                    font-size: 10pt;
+                    margin-bottom: 25px;
+                    font-weight: 100;
                 }
 
                 p {
                     text-align: center;
                     margin: 0;
                     margin-top: 2px;
+                    font-weight: 200;
                 }
             }
         }

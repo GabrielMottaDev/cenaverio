@@ -1,0 +1,18 @@
+<div class="bubble">
+    <button class="trigger" [class.active]="isExploded" (click)="explodeBubble()">
+        <div [@explodeBtn]="!isExploded">
+            <fa-icon [@explodeBtn]="!isExploded" [icon]="iconOpen" size="lg"></fa-icon>
+        </div>
+        <div class="wrapper" #bubbles [@explode]="!isExploded" [class.exploded]="!isExploded">
+            <button style="background: #EA4335;" (click)="openEmail()">
+                <fa-icon [icon]="iconEmail" [styles]="{'color': 'white'}" size="2x"></fa-icon>
+            </button>
+            <button style="background: #2374e1;" (click)="openPhone()">
+                <fa-icon [icon]="iconPhone" [styles]="{'color': 'white'}" size="2x"></fa-icon>
+            </button>
+            <button style="background: #25D366;" (click)="openWhatsapp()">
+                <fa-icon [icon]="iconWhatsapp" [styles]="{'color': 'white'}" size="2x"></fa-icon>
+            </button>
+        </div>
+    </button>
+</div>

@@ -1,6 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { LoaderService } from '../services/loader.service';
 import { LocaleService } from '../services/locale.service';
+import { Equipe } from '../shared/equipe';
+import { BubbleComponent } from '../views/bubble/bubble.component';
 
 @Component({
   selector: 'app-home',
@@ -9,43 +14,81 @@ import { LocaleService } from '../services/locale.service';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('header') header! : ElementRef;
-  
-  isMenuOpen = false;
-  isSticky = false;
-  constructor(public readonly localeService: LocaleService) { }
+  equipe: Equipe[] = [
+    {
+      name: 'Drª Sarita Bonette',
+      title: 'Contato Médico',
+      getTitle: () => {
+        return this.localeService.get('home.contact.team.medical');
+      },
+      image: '/assets/equipe/sarita.jpg',
+      displayPhone: '+55 (21) 98285-0393',
+      displayEmail: 'saritabonette@cenaverio.com.br',
+      email: 'saritabonette@cenaverio.com.br',
+      phone: '21982850393',
+      whatsapp: '5521982850393'
+    },
+    {
+      name: 'Drº Leonardo Ponce da Motta',
+      title: 'Contato Médico',
+      getTitle: () => {
+        return this.localeService.get('home.contact.team.medical');
+      },
+      image: '/assets/equipe/leonardo.jpg',
+      displayPhone: '+55 (21) 99997-8499',
+      displayEmail: 'leonardo@cenaverio.com.br',
+      email: 'leonardo@cenaverio.com.br',
+      phone: '21999978499',
+      whatsapp: '5521999978499'
+    },
+    {
+      name: 'Drª Mara Elisa de Oliveira Gama',
+      title: 'Contato Odontológico',
+      getTitle: () => {
+        return this.localeService.get('home.contact.team.dental');
+      },
+      image: '/assets/equipe/mara.jpg',
+      displayPhone: '+55 (21) 98000-2009',
+      displayEmail: 'maraodonto@cenaverio.com.br',
+      email: 'maraodonto@cenaverio.com.br',
+      phone: '21980002009',
+      whatsapp: '5521980002009'
+    }
+  ];
+
+  loader: Observable<boolean> = new Observable();
+
+  constructor(
+    private readonly titleService: Title,
+    public readonly localeService: LocaleService,
+    private readonly loaderService : LoaderService
+  ) { }
 
   ngOnInit(): void {
+    this.loader = this.loaderService.loader;
+
+    {
+      let userLocale = this.localeService.getUserLocale();
+      let titleToSet = "Loading...";
+      if(userLocale.startsWith('pt')) {
+        titleToSet = "Carregando...";
+      } else if(userLocale.startsWith('en')) {
+        titleToSet = "Loading...";
+      } else if(userLocale.startsWith('es')) {
+        titleToSet = "Cargando...";
+      }
+      this.titleService.setTitle(titleToSet);
+    }
+
+    this.localeService.locale$.subscribe((locale) => {
+      this.titleService.setTitle(this.localeService.get('home.title'));
+    });
   }
 
   ngAfterViewInit(): void {
-    window.onscroll = () => (this.onScrollFn());
-  }
-
-  toggleMenu(isOpen:boolean) {
-    this.isMenuOpen=isOpen
-
-    let body = document.getElementsByTagName('body')[0];
-    if (this.isMenuOpen) {
-      body.style.overflow = 'hidden';
-    } else {
-      body.style.overflow = '';
-    }
   }
   
-  onScrollFn(): void {
-    let sticky = this.header.nativeElement.offsetTop;
-    if (window.pageYOffset > sticky) {
-      this.isSticky = true;
-    } else {
-      this.isSticky = false;
-    }
-  }
-
   scroll(el: HTMLElement, block?: any, inline?: any) {
-    if(this.isMenuOpen){
-      this.toggleMenu(false);
-    }
     if(block == null) {
       block = 'center';
     }
@@ -57,21 +100,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   scrollToTop(): void {
     window.scroll(0,0);
-    // if(this.localeService.currentLocale.locale == 'pt-br'){
-    //   this.localeService.setLocale('es');
-    // } else {
-    //   this.localeService.setLocale('pt-br');
-    // }
-    // detectChanges();
-    // alert(JSON.stringify(this.localeService.locales));
-    // this.localeService.getLocale(environment.defaultLanguage).subscribe((res) => {
-    //   console.log(res);
-    // });
   }
 
   changeLocale(): void {
     let newLocale = 'pt-br';
-    switch (this.localeService.currentLocale.locale) {
+    switch (this.localeService.get('locale')) {
       case 'en':
         newLocale = 'pt-br'
         break;
@@ -89,7 +122,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   getLocaleImage() {
-    switch (this.localeService.currentLocale.locale) {
+    switch (this.localeService.get('locale')) {
       case 'en':
         return "url('/assets/paises/bandeira_inglaterra.jpg')";
       case 'pt-br':
@@ -102,8 +135,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   openWhatsapp(numero: string): void {
-    let url = 'https://wa.me/' + numero + '/?text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20os%20servi%C3%A7os%20da%20CenavRio.';
-    window.open(url, '_blank')!.focus();
+    // let url = 'https://wa.me/' + numero + '/?text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20os%20servi%C3%A7os%20da%20CenavRio.';
+    // window.open(url, '_blank')!.focus();
+
+  }
+
+  openBubble(bubble: BubbleComponent): void {
+    // console.log(event.currentTarget);
+    bubble.explodeBubble();
   }
 
 }
