@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  defaultLanguage: 'pt-br'
+  defaultLanguage: 'en'
 };
 
 /*

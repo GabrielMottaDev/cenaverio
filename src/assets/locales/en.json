@@ -1,6 +1,7 @@
 {
     "locale": "en",
     "home": {
+        "title": "Medical Centre Brazilian Mariners",
         "header": {
             "nav": {
                 "index": "Home",
@@ -33,6 +34,10 @@
         },
         "contact": {
             "title": "Contact",
+            "team": {
+                "medical": "Medical Contact",
+                "dental": "Dental Contact"
+            },
             "form": {
                 "title": "Contact Form",
                 "subject": "Subject",

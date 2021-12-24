@@ -1,6 +1,7 @@
 {
     "locale": "es",
     "home": {
+        "title": "Centro Médico Navegantes do Brasil",
         "header": {
             "nav": {
                 "index": "Inicio",
@@ -33,6 +34,10 @@
         },
         "contact": {
             "title": "Contacto",
+            "team": {
+                "medical": "Contacto Medico",
+                "dental": "Contacto Dental"
+            },
             "form": {
                 "title": "Formulario de contacto",
                 "subject": "Asunto",
