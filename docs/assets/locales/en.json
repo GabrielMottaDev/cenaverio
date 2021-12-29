@@ -1,0 +1,58 @@
+{
+    "locale": "en",
+    "home": {
+        "title": "Medical Centre Brazilian Mariners",
+        "header": {
+            "nav": {
+                "index": "Home",
+                "company": "The Company",
+                "activities": "Our Activities",
+                "clients": "Our Clients",
+                "contact": "Contact"
+            }
+        },
+        "company": {
+            "title": "The Company",
+            "the-company": "<b>CENAVE</b> provides the highest quality <b>medical and dental</b> services, being in Rio de Janeiro, a reference in emergency care to the Merchant Navy in Brasil.<br/><br/>Our team of highly skilled, bilingual and internationally recognized professionals provides excellent uninterrupted medical and dental care for insurance companies, cabotage and long-haul navigation and expatriated families."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "our-mission": "To provide the highest quality of <b>medical and dental</b> care for urgent/emergency cases for those directly or indirectly involved in the various stages of cabotage and long-haul navigation.<br/><br/>Attention at any time and with immediate response, being our services provided by all medical and odontology specialties at the highest standard."
+        },
+        "activities": {
+            "title": "Our Activities",
+            "our-activities": "<ul><li>Outpatient <b>medical and dental</b> care, urgency and emergency with bilingual professionals, specialized in several areas.</li><li>Laboratory tests with results in up to <b>48h</b>, except in special dosage cases.</li><li>Specialized treatment for large burns.</li><li>Own <b>mobile ICU</b> to rescue and transfer patients.</li><li><b>Medical escort</b>: physician and nurse accompaniment to stable patients during transportation.</li><li><b>We quote and supply</b> local market products to ensure the vessel infirmary supply needs.</li><li>Renewal of the vessel's <b>Medical Chest Certificate</b>.</li><li>Realization of annual and biannual <b>medical certificates</b> for various flags (Malaysia, Bahamas, IMO etc).</li></ul>"
+        },
+        "speciality": {
+            "title": "Speciality",
+            "cabotage": "Cabotage navigation",
+            "urgency": "Urgency / Emergency",
+            "navigation": "Long-haul navigation"
+        },
+        "clients": {
+            "title": "Our Clients"
+        },
+        "contact": {
+            "title": "Contact",
+            "team": {
+                "medical": "Medical Contact",
+                "dental": "Dental Contact"
+            },
+            "form": {
+                "title": "Contact Form",
+                "subject": "Subject",
+                "name": "Name",
+                "email": "E-mail",
+                "telephone": "Phone/Telephone",
+                "message": "Enter your message",
+                "submit": "Submit"
+            } 
+        },
+        "footer": {
+            "dev": "Developed by: @gabrielmottadev"
+        }
+    },
+    "not-found": {
+
+    }
+}

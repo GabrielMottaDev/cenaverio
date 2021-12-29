@@ -1,0 +1,47 @@
+{
+    "en": {
+        "code": "1",
+        "language": "english",
+        "country": "united states",
+        "otherLocales": {
+            "pt-br": {
+                "language": "portuguese",
+                "country": "brazil"
+            },
+            "es": {
+                "language": "spanish",
+                "country": "spain"
+            }
+        }
+    },
+    "pt-br": {
+        "code": "55",
+        "language": "português",
+        "country": "brasil",
+        "otherLocales": {
+            "en": {
+                "language": "inglês",
+                "country": "estados unidos"
+            },
+            "es": {
+                "language": "espanhol",
+                "country": "espanha"
+            }
+        }
+    },
+    "es": {
+        "code": "34",
+        "language": "español",
+        "country": "españa",
+        "otherLocales": {
+            "en": {
+                "language": "inglés",
+                "country": "estados unidos"
+            },
+            "pt-br": {
+                "language": "portugués",
+                "country": "brasil"
+            }
+        }
+    }
+}
