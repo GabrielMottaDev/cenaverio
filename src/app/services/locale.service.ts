@@ -29,12 +29,12 @@ export class LocaleService {
   }  
 
   init() {
-    this.http.get('/assets/locales/locales.json', {}).subscribe((res) => {
+    this.http.get('./assets/locales/locales.json', {}).subscribe((res) => {
       this.localesRelation = res;
       let localeArray = Object.keys(this.localesRelation);
       let promises: any = [];
       localeArray.forEach(locale => {
-        promises.push(this.http.get('/assets/locales/' + locale + '.json', {}).toPromise());
+        promises.push(this.http.get('./assets/locales/' + locale + '.json', {}).toPromise());
       });
       Promise.all(promises).then((res: any) => {
         res.forEach((localeSheet: any) => {
