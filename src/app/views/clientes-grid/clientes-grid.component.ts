@@ -8,7 +8,7 @@ import { Cliente } from 'src/app/shared/cliente';
 })
 export class ClientesGridComponent implements OnInit {
 
-  path = '/assets/empresas/';
+  path = './assets/empresas/';
 
   clientes : Cliente[] = [
     {

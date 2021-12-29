@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       getTitle: () => {
         return this.localeService.get('home.contact.team.medical');
       },
-      image: '/assets/equipe/sarita.jpg',
+      image: './assets/equipe/sarita.jpg',
       displayPhone: '+55 (21) 98285-0393',
       displayEmail: 'saritabonette@cenaverio.com.br',
       email: 'saritabonette@cenaverio.com.br',
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       getTitle: () => {
         return this.localeService.get('home.contact.team.medical');
       },
-      image: '/assets/equipe/leonardo.jpg',
+      image: './assets/equipe/leonardo.jpg',
       displayPhone: '+55 (21) 99997-8499',
       displayEmail: 'leonardo@cenaverio.com.br',
       email: 'leonardo@cenaverio.com.br',
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       getTitle: () => {
         return this.localeService.get('home.contact.team.dental');
       },
-      image: '/assets/equipe/mara.jpg',
+      image: './assets/equipe/mara.jpg',
       displayPhone: '+55 (21) 98000-2009',
       displayEmail: 'maraodonto@cenaverio.com.br',
       email: 'maraodonto@cenaverio.com.br',
@@ -124,13 +124,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   getLocaleImage() {
     switch (this.localeService.get('locale')) {
       case 'en':
-        return "url('/assets/paises/bandeira_inglaterra.jpg')";
+        return "url('./assets/paises/bandeira_inglaterra.jpg')";
       case 'pt-br':
-        return "url('/assets/paises/bandeira_brasil.jpg')";
+        return "url('./assets/paises/bandeira_brasil.jpg')";
       case 'es':
-        return "url('/assets/paises/bandeira_espanha.jpg')";
+        return "url('./assets/paises/bandeira_espanha.jpg')";
       default:
-        return "url('/assets/paises/bandeira_brasil.jpg')";
+        return "url('./assets/paises/bandeira_brasil.jpg')";
     }
   }
 

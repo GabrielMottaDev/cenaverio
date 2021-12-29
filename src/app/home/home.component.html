@@ -3,7 +3,7 @@
     </div>
     <app-navbar [elements]="[inicio,empresa,atividades,clientes,contato]" #navbar></app-navbar>
 </header>
-<div class="navio-banner" style="background-image: url('/assets/banner_01.png');" id="inicio" #inicio>
+<div class="navio-banner" style="background-image: url('./assets/banner_01.png');" id="inicio" #inicio>
     <div class="navio-banner-cover"></div>
 </div>
 
@@ -35,10 +35,10 @@
     </div>
     <div class="atividades-align">
         <div class="ambiente-grid">
-            <div style="background-image: url('/assets/ambiente/escritorio_1.png');"></div>
-            <div style="background-image: url('/assets/ambiente/escritorio_2.png');"></div>
-            <div style="background-image: url('/assets/ambiente/escritorio_3.png');"></div>
-            <div style="background-image: url('/assets/ambiente/escritorio_4.png');"></div>
+            <div style="background-image: url('./assets/ambiente/escritorio_1.png');"></div>
+            <div style="background-image: url('./assets/ambiente/escritorio_2.png');"></div>
+            <div style="background-image: url('./assets/ambiente/escritorio_3.png');"></div>
+            <div style="background-image: url('./assets/ambiente/escritorio_4.png');"></div>
         </div>
         <div class="atividades-content" [innerHtml]="localeService.get('home.activities.our-activities')">
             <ul>
@@ -62,19 +62,19 @@
         <div class="especialidades-grid">
             <div>
                 <div class="image-part">
-                    <div class="image-part-cover" style="background-image: url('/assets/svg/brasil.svg');"></div>
+                    <div class="image-part-cover" style="background-image: url('./assets/svg/brasil.svg');"></div>
                 </div>
                 <h2 [innerHtml]="localeService.get('home.speciality.cabotage')">Navegação de cabotagem</h2>
             </div>
             <div>
                 <div class="image-part">
-                    <div class="image-part-cover" style="background-image: url('/assets/svg/danger.svg');"></div>
+                    <div class="image-part-cover" style="background-image: url('./assets/svg/danger.svg');"></div>
                 </div>
                 <h2 [innerHtml]="localeService.get('home.speciality.urgency')">Urgência / Emergência</h2>
             </div>
             <div>
                 <div class="image-part">
-                    <div class="image-part-cover" style="background-image: url('/assets/svg/planet.svg');"></div>
+                    <div class="image-part-cover" style="background-image: url('./assets/svg/planet.svg');"></div>
                 </div>
                 <h2 [innerHtml]="localeService.get('home.speciality.navigation')">Navegação de longo curso</h2>
             </div>
@@ -108,7 +108,7 @@
     </div>
     <div class="contato-bottom">
         <div class="contato-info">
-            <img src="/assets/logo.png">
+            <img src="./assets/logo.png">
             <h3>
                 CENTRO MÉDICO NAVEGANTES DO BRASIL LTDA
             </h3>
