@@ -18,6 +18,14 @@ header {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    header {
+        .top-container {
+            height: 95px;
+        }
+    }
+}
+
 .menu-button {
     display: none;
     width: fit-content;
@@ -97,7 +105,8 @@ header {
 @media only screen and (max-width: 600px) {
     .content {
         width: 95%;
-        margin-top: 50px;
+        margin-top: 0px;
+        padding: 40px 0px;
     }
 }
 
@@ -125,7 +134,8 @@ header {
 
 @media only screen and (max-width: 600px) {
     .navio-banner {
-        height: 300px;
+        // height: 300px;
+        height: 200px;
     }
 }
 
@@ -205,9 +215,11 @@ header {
                 }
 
                 h2 {
-                    margin-top: 50px;
-                    font-weight: 400;
-                    font-size: 15pt;
+                    // margin-top: 50px;
+                    // font-weight: 400;
+                    // font-size: 15pt;
+                    font-size: 15.5pt;
+                    margin: 18px 25px;
                 }
             }
         }
@@ -219,6 +231,7 @@ header {
     .especialidades {
 
         height: 890px;
+        padding: 80px 0px;
 
         .especialidades-cover {
 
@@ -243,8 +256,10 @@ header {
                     }
 
                     h2 {
-                        margin-top: 18px;
+                        // margin-top: 18px;
+                        // font-size: 15.5pt;
                         font-size: 15.5pt;
+                        margin: 18px 18px;
                     }
                 }
             }
@@ -532,7 +547,7 @@ header {
                 margin-bottom: 60px;
             }
             h3 {
-                
+                margin-bottom: 20px;
             }
             p {
                 text-align: left;

@@ -16,19 +16,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   equipe: Equipe[] = [
     {
-      name: 'Drª Sarita Bonette',
-      title: 'Contato Médico',
-      getTitle: () => {
-        return this.localeService.get('home.contact.team.medical');
-      },
-      image: './assets/equipe/sarita.jpg',
-      displayPhone: '+55 (21) 98285-0393',
-      displayEmail: 'saritabonette@cenaverio.com.br',
-      email: 'saritabonette@cenaverio.com.br',
-      phone: '21982850393',
-      whatsapp: '5521982850393'
-    },
-    {
       name: 'Drº Leonardo Ponce da Motta',
       title: 'Contato Médico',
       getTitle: () => {
@@ -40,6 +27,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
       email: 'leonardo@cenaverio.com.br',
       phone: '21999978499',
       whatsapp: '5521999978499'
+    },
+    {
+      name: 'Drª Sarita Bonette',
+      title: 'Contato Médico',
+      getTitle: () => {
+        return this.localeService.get('home.contact.team.medical');
+      },
+      image: './assets/equipe/sarita.jpg',
+      displayPhone: '+55 (21) 98285-0393',
+      displayEmail: 'saritabonette@cenaverio.com.br',
+      email: 'saritabonette@cenaverio.com.br',
+      phone: '21982850393',
+      whatsapp: '5521982850393'
     },
     {
       name: 'Drª Mara Elisa de Oliveira Gama',

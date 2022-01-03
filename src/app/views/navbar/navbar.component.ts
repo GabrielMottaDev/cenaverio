@@ -81,6 +81,10 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     if(inline == null) {
       inline = 'center';
     }
+    // behavior: "auto"  | "instant" | "smooth",
+    // block:    "start" | "center" | "end" | "nearest",
+    // inline:   "start" | "center" | "end" | "nearest"
+    // alert(element + '|' +  block + '|' + inline)
     element.scrollIntoView({block: block, inline: inline, behavior: "smooth"});
   }
 

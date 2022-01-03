@@ -66,7 +66,7 @@ export class BubbleComponent implements OnInit, AfterViewInit {
     if(this.isExploded == false){
       return;
     }
-    let url = 'https://wa.me/' + this.whatsapp + '/?text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20os%20servi%C3%A7os%20da%20CenavRio.';
+    let url = 'https://wa.me/' + this.whatsapp + '/?text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20os%20servi%C3%A7os%20da%20CenaveRio.';
     window.open(url, '_blank')!.focus();
   }
 

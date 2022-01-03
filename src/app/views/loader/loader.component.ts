@@ -46,11 +46,12 @@ export class LoaderComponent implements OnInit {
       }
       let body = document.getElementsByTagName('body')[0];
       if(status == false) {
+        let addDelay = 250; // 800
         setTimeout(() => {
           this.isLoading = false;
           body.style.overflow = '';
           window.scroll(0,0);
-        }, 800);
+        }, addDelay);
       } else {
         this.isLoading = true;
         body.style.overflow = 'hidden';

@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
 
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: black;
     z-index: 99999;
@@ -19,10 +19,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        
+        font-size: 8vmin;
         h1 {
             text-align: center;
             color: white;
-            font-size: 2.5rem;
+            font-size: 5vmin;
         }
         .loader-spinner {
             color: white;
@@ -32,4 +34,15 @@
         }
     }
 
+}
+
+@media only screen and (max-width: 600px) {
+    .loader {
+        .loader-message {
+            font-size: 12vmin;
+            h1 {
+                font-size: 9vmin;
+            }
+        }
+    }
 }

@@ -1,26 +1,28 @@
 <nav class="nav-desktop" #navbarDesktop>
-    <div class="nav-item" (click)="scroll('inicio')" [innerHtml]="localeService.get('home.header.nav.index')">Início</div>
-    <div class="nav-item" (click)="scroll('empresa')" [innerHtml]="localeService.get('home.header.nav.company')">A Empresa</div>
-    <div class="nav-item" (click)="scroll('atividades')" [innerHtml]="localeService.get('home.header.nav.activities')">Nossas Atividades</div>
-    <div class="nav-item" (click)="scroll('clientes')" [innerHtml]="localeService.get('home.header.nav.clients')">Nossos Clientes</div>
-    <div class="nav-item" (click)="scroll('contato')" [innerHtml]="localeService.get('home.header.nav.contact')">Contato</div>
+    <div class="nav-center">
+        <div class="nav-item" (click)="scroll('inicio', 'start', 'start')" [innerHtml]="localeService.get('home.header.nav.index')">Início</div>
+        <div class="nav-item" (click)="scroll('empresa', 'start', 'start')" [innerHtml]="localeService.get('home.header.nav.company')">A Empresa</div>
+        <div class="nav-item" (click)="scroll('atividades', 'center', 'start')" [innerHtml]="localeService.get('home.header.nav.activities')">Nossas Atividades</div>
+        <div class="nav-item" (click)="scroll('clientes', 'center', 'start')" [innerHtml]="localeService.get('home.header.nav.clients')">Nossos Clientes</div>
+        <div class="nav-item" (click)="scroll('contato', 'start', 'start')" [innerHtml]="localeService.get('home.header.nav.contact')">Contato</div>
+    </div>
 </nav>
 
 <nav class="nav-mobile" #navbarMobile>
     <div class="nav-button" (click)="toggleMenu(true)">
-        <fa-icon [icon]="iconOpen" [styles]="{'color': 'black'}" size="2x"></fa-icon>
+        <fa-icon [icon]="iconOpen" [styles]="{'color': 'white'}" size="2x"></fa-icon>
     </div>
     <div class="nav-menu" [@menuAppear]="!isMenuOpen" [class.show]="isMenuOpen">
         <div class="nav-menu-inner">
             <div class="nav-menu-button" (click)="toggleMenu(false)">
-                <fa-icon [icon]="iconOpen" [styles]="{'color': 'black'}" size="2x"></fa-icon>
+                <fa-icon [icon]="iconOpen" [styles]="{'color': 'white'}" size="2x"></fa-icon>
             </div>
             <div class="nav-menu-items">
-                <div class="nav-item" (click)="scroll('inicio')" [innerHtml]="localeService.get('home.header.nav.index')">Início</div>
-                <div class="nav-item" (click)="scroll('empresa')" [innerHtml]="localeService.get('home.header.nav.company')">A Empresa</div>
-                <div class="nav-item" (click)="scroll('atividades')" [innerHtml]="localeService.get('home.header.nav.activities')">Nossas Atividades</div>
-                <div class="nav-item" (click)="scroll('clientes')" [innerHtml]="localeService.get('home.header.nav.clients')">Nossos Clientes</div>
-                <div class="nav-item" (click)="scroll('contato')" [innerHtml]="localeService.get('home.header.nav.contact')">Contato</div>
+                <div class="nav-item" (click)="scroll('inicio', 'start', 'start')" [innerHtml]="localeService.get('home.header.nav.index')">Início</div>
+                <div class="nav-item" (click)="scroll('empresa', 'start', 'start')" [innerHtml]="localeService.get('home.header.nav.company')">A Empresa</div>
+                <div class="nav-item" (click)="scroll('atividades', 'start', 'start')" [innerHtml]="localeService.get('home.header.nav.activities')">Nossas Atividades</div>
+                <div class="nav-item" (click)="scroll('clientes', 'center', 'start')" [innerHtml]="localeService.get('home.header.nav.clients')">Nossos Clientes</div>
+                <div class="nav-item" (click)="scroll('contato', 'start', 'start')" [innerHtml]="localeService.get('home.header.nav.contact')">Contato</div>
             </div>
         </div>
     </div>
