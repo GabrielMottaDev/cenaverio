@@ -8,7 +8,7 @@
     <input type="text" placeholder="{{localeService.get('home.contact.form.telephone')}}" formControlName="telephone" [class.invalid]="(telephone?.invalid && (telephone?.touched || telephone?.dirty)) || (telephone?.invalid && submitStatus == 'invalid')" mask="+00 (00) 00000-0000 || +00 (00) 0000-0000" [showMaskTyped]=false [dropSpecialCharacters]=false>
     <textarea placeholder="{{localeService.get('home.contact.form.message')}}" formControlName="message" [class.invalid]="(message?.invalid && (message?.touched || message?.dirty)) || (message?.invalid && submitStatus == 'invalid')"></textarea>
     <button type="submit" [innerHtml]="submitStatus == 'sending' ? localeService.get('home.contact.form.submit-sending') : submitStatus == 'success' ? localeService.get('home.contact.form.submit-success') : submitStatus == 'error' ? localeService.get('home.contact.form.submit-error') : localeService.get('home.contact.form.submit')">Enviar</button>
-    <div class="recaptchaAlert" [class.recaptchaAlertShow]="(recaptchaReactive?.invalid && (recaptchaReactive?.touched || recaptchaReactive?.dirty)) || (recaptchaReactive?.invalid && submitStatus == 'invalid')">
+    <div class="recaptchaAlert" [class.recaptchaAlertShow]="submitStatus != 'success' && (recaptchaReactive?.invalid && (recaptchaReactive?.touched || recaptchaReactive?.dirty)) || (recaptchaReactive?.invalid && submitStatus == 'invalid')">
         Preencha o recaptcha abaixo!
     </div>
     <re-captcha

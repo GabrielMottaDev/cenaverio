@@ -56,7 +56,7 @@
         }
 
         .recaptchaAlert,.recaptchaAlertShow {
-            display: none;
+            display: none !important;
         }
     }
 }
