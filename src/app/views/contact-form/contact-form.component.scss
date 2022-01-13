@@ -51,6 +51,7 @@
     input, textarea, button {
         opacity: .7;
         pointer-events: none;
+        cursor: not-allowed;
         &:hover {
             cursor: not-allowed;
         }
