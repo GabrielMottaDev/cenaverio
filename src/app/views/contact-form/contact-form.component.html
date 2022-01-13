@@ -1,11 +1,22 @@
 <div class="content-title">
     <h2 [innerHtml]="localeService.get('home.contact.form.title')">Formulário de contato</h2>
 </div>
-<form class="formulario" [formGroup]="contactForm" (ngSubmit)="submitContactForm(contactForm)">
-    <input type="text" placeholder="{{localeService.get('home.contact.form.subject')}}" formControlName="subject" [class.invalid]="subject?.invalid && (subject?.touched || subject?.dirty)" [patterns]="textPattern" mask="0*" [dropSpecialCharacters]=false>
-    <input type="text" placeholder="{{localeService.get('home.contact.form.name')}}" formControlName="name" [class.invalid]="name?.invalid && (name?.touched || name?.dirty)" [patterns]="textPattern" mask="0*" [dropSpecialCharacters]=false>
-    <input type="text" placeholder="{{localeService.get('home.contact.form.email')}}" formControlName="email" [class.invalid]="email?.invalid && (email?.touched || email?.dirty)">
-    <input type="text" placeholder="{{localeService.get('home.contact.form.telephone')}}" formControlName="telephone" [class.invalid]="telephone?.invalid && (telephone?.touched || telephone?.dirty)" mask="+00 (00) 00000-0000 || +00 (00) 0000-0000" [showMaskTyped]=false [dropSpecialCharacters]=false>
-    <textarea placeholder="{{localeService.get('home.contact.form.message')}}" formControlName="message" [class.invalid]="message?.invalid && (message?.touched || message?.dirty)"></textarea>
-    <button type="submit" [innerHtml]="localeService.get('home.contact.form.submit')">Enviar</button>
+<form class="formulario" [class.formularioSended]="(submitStatus == 'success')" [formGroup]="contactForm" (ngSubmit)="submitContactForm(contactForm)">
+    <input type="text" placeholder="{{localeService.get('home.contact.form.subject')}}" formControlName="subject" [class.invalid]="(subject?.invalid && (subject?.touched || subject?.dirty)) || (subject?.invalid && submitStatus == 'invalid')" [patterns]="textPattern" mask="0*" [dropSpecialCharacters]=false>
+    <input type="text" placeholder="{{localeService.get('home.contact.form.name')}}" formControlName="name" [class.invalid]="(name?.invalid && (name?.touched || name?.dirty)) || (name?.invalid && submitStatus == 'invalid')" [patterns]="textPattern" mask="0*" [dropSpecialCharacters]=false>
+    <input type="text" placeholder="{{localeService.get('home.contact.form.email')}}" formControlName="email" [class.invalid]="(email?.invalid && (email?.touched || email?.dirty)) || (email?.invalid && submitStatus == 'invalid')">
+    <input type="text" placeholder="{{localeService.get('home.contact.form.telephone')}}" formControlName="telephone" [class.invalid]="(telephone?.invalid && (telephone?.touched || telephone?.dirty)) || (telephone?.invalid && submitStatus == 'invalid')" mask="+00 (00) 00000-0000 || +00 (00) 0000-0000" [showMaskTyped]=false [dropSpecialCharacters]=false>
+    <textarea placeholder="{{localeService.get('home.contact.form.message')}}" formControlName="message" [class.invalid]="(message?.invalid && (message?.touched || message?.dirty)) || (message?.invalid && submitStatus == 'invalid')"></textarea>
+    <button type="submit" [innerHtml]="submitStatus == 'sending' ? localeService.get('home.contact.form.submit-sending') : submitStatus == 'success' ? localeService.get('home.contact.form.submit-success') : submitStatus == 'error' ? localeService.get('home.contact.form.submit-error') : localeService.get('home.contact.form.submit')">Enviar</button>
+    <div class="recaptchaAlert" [class.recaptchaAlertShow]="(recaptchaReactive?.invalid && (recaptchaReactive?.touched || recaptchaReactive?.dirty)) || (recaptchaReactive?.invalid && submitStatus == 'invalid')">
+        Preencha o recaptcha abaixo!
+    </div>
+    <re-captcha
+        formControlName="recaptchaReactive"
+        name="captcha"
+        required
+        siteKey="6LcDmQ4eAAAAAA4p0NogRu9hm14oakjTL33-dc8Q"
+        style="transform:scale(1);transform-origin:0;"
+        [style.display]="submitStatus == 'success' ? 'none' : 'block'"
+    ></re-captcha>
 </form>

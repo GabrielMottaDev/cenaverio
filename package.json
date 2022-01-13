@@ -23,6 +23,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "ng-recaptcha": "^9.0.0",
     "ngx-cookie": "^5.0.2",
     "ngx-mask": "^13.0.0",
     "rxjs": "~6.6.0",

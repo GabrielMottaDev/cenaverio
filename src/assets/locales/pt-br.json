@@ -45,7 +45,10 @@
                 "email": "E-mail",
                 "telephone": "Celular/Telefone",
                 "message": "Digite sua mensagem",
-                "submit": "Enviar"
+                "submit": "Enviar",
+                "submit-error": "Erro ao enviar",
+                "submit-sending": "Enviando...",
+                "submit-success": "Mensagem recebida!"
             } 
         },
         "footer": {

@@ -16,6 +16,7 @@ import { BubbleComponent } from './views/bubble/bubble.component';
 import { LoaderComponent } from './views/loader/loader.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CookieModule } from 'ngx-cookie';
+import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -30,8 +31,10 @@ import { CookieModule } from 'ngx-cookie';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     ReactiveFormsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: true

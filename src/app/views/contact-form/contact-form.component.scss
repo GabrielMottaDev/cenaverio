@@ -34,4 +34,29 @@
           cursor: pointer;
       }
     }
+    .recaptchaAlert {
+        display: none;
+    }
+    .recaptchaAlertShow {
+        display: block;
+        width: 100%;
+        background: #ff6060;
+        color: white;
+        text-align: center;
+        padding: 8px 0;
+    }
+}
+
+.formularioSended {
+    input, textarea, button {
+        opacity: .7;
+        pointer-events: none;
+        &:hover {
+            cursor: not-allowed;
+        }
+
+        .recaptchaAlert {
+            display: none;
+        }
+    }
 }
