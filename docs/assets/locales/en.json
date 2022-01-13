@@ -45,7 +45,10 @@
                 "email": "E-mail",
                 "telephone": "Phone/Telephone",
                 "message": "Enter your message",
-                "submit": "Submit"
+                "submit": "Submit",
+                "submit-error": "Submit error",
+                "submit-sending": "Sending...",
+                "submit-success": "Message received!"
             } 
         },
         "footer": {
