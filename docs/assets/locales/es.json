@@ -48,7 +48,8 @@
                 "submit": "Enviar",
                 "submit-error": "Error al enviar ",
                 "submit-sending": "Enviando...",
-                "submit-success": "Mensaje recibido!"
+                "submit-success": "Mensaje recibido!",
+                "recaptcha-alert": "¡Completa el recaptcha!"
             } 
         },
         "footer": {
